@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Generator</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Helvetica+Neue:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Generate Image</h1>
+        <form id="imageForm" class="mt-4">
+            <div class="form-group">
+                <label for="title">Title:</label>
+                <input type="text" id="title" name="title" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="subtitle">Subtitle:</label>
+                <input type="text" id="subtitle" name="subtitle" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="category">Category:</label>
+                <input type="text" id="category" name="category" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="background_url">Background URL:</label>
+		<p>Use only to provide your own background picture in JPG or PNG URL Format</p>
+                <input type="url" id="background_url" name="background_url" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="keywords">Keywords (comma-separated):</label>
+		<p>If you don't like the background picture, change the keywords as you like </p>
+                <input type="text" id="keywords" name="keywords" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Generate</button>
+        </form>
+
+        <!-- Container to display the generated image -->
+        <div id="generatedImageContainer" class="mt-4" style="display: none;">
+            <h2 class="text-center">Generated Image</h2>
+            <img id="generatedImage" src="" alt="Generated Image" class="img-fluid mx-auto d-block">
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>
